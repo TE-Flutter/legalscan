@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/file_reader.dart';
 import 'package:flutter_app/home.dart';
+import 'package:flutter_app/structured_file.dart';
 
-// Define a class that represents a single header and description
-class HeaderDescription {
-  final String header;
-  final String description;
-
-  const HeaderDescription({required this.header, required this.description});
-}
+const Answers = [
+  HeaderDescription(header: "What is the meaning of life?", description: "42"),
+  HeaderDescription(header: "How do I learn flutter?", description: "It's impossible")
+];
 
 // Define the main Flutter widget that will display the headers and descriptions
-class HeaderDescriptionView extends StatelessWidget {
-  final List<HeaderDescription> headerDescriptions;
-
-  HeaderDescriptionView({required this.headerDescriptions});
-
+class FAQView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,17 +18,17 @@ class HeaderDescriptionView extends StatelessWidget {
             child: Stack(
               children:[
                   ListView.builder(
-                  itemCount: headerDescriptions.length,
+                  itemCount: Answers.length,
                   itemBuilder: (context, index) {
                     return Column(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            headerDescriptions[index].header,
+                            Answers[index].header,
                             textAlign: TextAlign.left,
                             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 25),
                           ),
                           Text(
-                            headerDescriptions[index].description,
+                            Answers[index].description,
                             textAlign: TextAlign.left,
                             style: TextStyle(fontWeight: FontWeight.normal, color: Colors.black, fontSize: 20),
 
@@ -44,21 +38,6 @@ class HeaderDescriptionView extends StatelessWidget {
                     );
                   },
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-                    width: double.infinity,
-                    child: 
-                    
-                      ElevatedButton(child: Text('Upload another file'), onPressed: () {
-                        Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomeScreen())
-                        );
-                      },)
-                    )
-                  
-                  )
               ]),
 ),
         );

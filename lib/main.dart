@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/signin.dart';
 import 'package:flutter_app/signup.dart';
+import 'package:flutter_app/user_screen.dart';
+
+import 'home.dart';
 
 void main() {
   runApp(MyApp());

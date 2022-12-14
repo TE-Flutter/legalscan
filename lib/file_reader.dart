@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/doctypes_search.dart';
 import 'package:flutter_app/spinner.dart';
 import 'package:flutter_app/structured_file.dart';
 
@@ -34,6 +35,7 @@ class FileReaderState extends State<FileReader> {
               Text('Upload new document',
               style: TextStyle(fontSize: 24),
               ),
+              DoctypesSearch(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

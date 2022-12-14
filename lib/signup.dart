@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/file_reader.dart';
+import 'package:flutter_app/home.dart';
 import 'package:flutter_app/signin.dart';
 
 class SignUpView extends StatelessWidget {
@@ -34,7 +35,7 @@ class SignUpView extends StatelessWidget {
                   } else {
                     print('Passwords match');
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FileReader())
+                      MaterialPageRoute(builder: (context) => HomeScreen())
                     );
                   }
                 },

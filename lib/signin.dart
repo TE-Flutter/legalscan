@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/file_reader.dart';
+import 'package:flutter_app/home.dart';
 
 import 'signup.dart';
 
@@ -31,7 +32,7 @@ class SignInView extends StatelessWidget {
                   if (emailController.text == 'admin' && passwordController.text == 'admin') {
                     print('Login successful');
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FileReader())
+                      MaterialPageRoute(builder: (context) => HomeScreen())
                     );
                   } else {
                     print('Login failed');
