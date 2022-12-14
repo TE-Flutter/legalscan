@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
             tabs: [
               Tab(icon: Icon(Icons.document_scanner)),
               Tab(icon: Icon(Icons.person)),
-              Tab(icon: Icon(Icons.question_answer)),
+              Tab(icon: Text("FAQ")),
             ],
           ),
           title: Text('Tabs Demo'),
