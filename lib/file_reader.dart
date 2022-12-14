@@ -35,6 +35,7 @@ class FileReaderState extends State<FileReader> {
               Text('Upload new document',
               style: TextStyle(fontSize: 24),
               ),
+              SizedBox(height: 20),
               DoctypesSearch(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

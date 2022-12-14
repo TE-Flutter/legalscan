@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
               Tab(icon: Text("FAQ")),
             ],
           ),
-          title: Text('Tabs Demo'),
+          title: Text('LegalScan'),
         ),
         body: TabBarView(
           children: [
